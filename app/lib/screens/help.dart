@@ -2,7 +2,7 @@ import 'package:accordion/controllers.dart';
 import 'package:app/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:accordion/accordion.dart';
-import 'package:get/get.dart';
+
 
 class HelpScreen extends StatelessWidget {
   const HelpScreen({super.key});
