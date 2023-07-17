@@ -35,43 +35,6 @@ class CdigoDeVerificacin extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      // devicedeviceframecomponentssta (I163:40959;1:52422)
-                      margin: EdgeInsets.fromLTRB(8*fem, 0*fem, 8*fem, 18*fem),
-                      padding: EdgeInsets.fromLTRB(0*fem, 2*fem, 0*fem, 2*fem),
-                      width: double.infinity,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            // time9bd (I163:40959;1:52422;50758:11370)
-                            margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 289*fem, 0*fem),
-                            child: Text(
-                              '9:30',
-                              style: SafeGoogleFont (
-                                'Roboto',
-                                fontSize: 14*ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.4285714286*ffem/fem,
-                                letterSpacing: 0.14*fem,
-                                color: Color(0xff1e1b16),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            // righticonsFef (I163:40959;1:52422;50758:11372)
-                            margin: EdgeInsets.fromLTRB(0*fem, 3*fem, 0*fem, 0*fem),
-                            width: 46*fem,
-                            height: 17*fem,
-                            child: Image.asset(
-                              'assets/espacio-de-trabajo/images/right-icons-Dv7.png',
-                              width: 46*fem,
-                              height: 17*fem,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
                       // atrsm7D (163:40972)
                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 360*fem, 21*fem),
                       width: 16*fem,
@@ -180,20 +143,6 @@ class CdigoDeVerificacin extends StatelessWidget {
                                     color: Color(0xff4d4639),
                                   ),
                                 ),
-                                Container(
-                                  // supportingtext2jH (I163:40970;1:23776)
-                                  margin: EdgeInsets.fromLTRB(16*fem, 0*fem, 0*fem, 0*fem),
-                                  child: Text(
-                                    'Supporting text',
-                                    style: SafeGoogleFont (
-                                      'Roboto',
-                                      fontSize: 12*ffem,
-                                      fontWeight: FontWeight.w700,
-                                      height: 1.3333333333*ffem/fem,
-                                      color: Color(0xff4d4639),
-                                    ),
-                                  ),
-                                ),
                               ],
                             ),
                           ),
@@ -233,34 +182,7 @@ class CdigoDeVerificacin extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      // home1LK (I163:40959;1:52423;1:52428)
-                      margin: EdgeInsets.fromLTRB(154*fem, 0*fem, 154*fem, 0*fem),
-                      width: double.infinity,
-                      height: 2*fem,
-                      decoration: BoxDecoration (
-                        borderRadius: BorderRadius.circular(8*fem),
-                        color: Color(0xff1e1b16),
-                      ),
-                    ),
                   ],
-                ),
-              ),
-            ),
-            Positioned(
-              // navegacinwUs (163:40973)
-              left: 152*fem,
-              top: 878*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 109*fem,
-                  height: 4*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(100*fem),
-                      color: Color(0xff000000),
-                    ),
-                  ),
                 ),
               ),
             ),
