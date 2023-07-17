@@ -42,54 +42,10 @@ class RegistroCorreo extends StatelessWidget {
                         height: 24*fem,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              // timeKqq (I123:37393;1:52422;50758:11370)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 289*fem, 0*fem),
-                              child: Text(
-                                '9:30',
-                                style: SafeGoogleFont (
-                                  'Roboto',
-                                  fontSize: 14*ffem,
-                                  fontWeight: FontWeight.w500,
-                                  height: 1.4285714286*ffem/fem,
-                                  letterSpacing: 0.14*fem,
-                                  color: Color(0xff1e1b16),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              // righticonsRdy (I123:37393;1:52422;50758:11372)
-                              margin: EdgeInsets.fromLTRB(0*fem, 3*fem, 0*fem, 0*fem),
-                              width: 46*fem,
-                              height: 17*fem,
-                              child: Image.asset(
-                                'assets/espacio-de-trabajo/images/right-icons-aeB.png',
-                                width: 46*fem,
-                                height: 17*fem,
-                              ),
-                            ),
-                          ],
                         ),
                       ),
                     ),
-                    Positioned(
-                      // homejuZ (I123:37393;1:52423;1:52428)
-                      left: 170*fem,
-                      top: 882*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 72*fem,
-                          height: 2*fem,
-                          child: Container(
-                            decoration: BoxDecoration (
-                              borderRadius: BorderRadius.circular(8*fem),
-                              color: Color(0xff1e1b16),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+
                     Positioned(
                       // ingresatucelularocorreoSoy (123:37395)
                       left: 64*fem,
@@ -382,20 +338,6 @@ class RegistroCorreo extends StatelessWidget {
                                                 color: Color(0xff4d4639),
                                               ),
                                             ),
-                                            Container(
-                                              // supportingtextX43 (I123:37402;1:23776)
-                                              margin: EdgeInsets.fromLTRB(16*fem, 0*fem, 0*fem, 0*fem),
-                                              child: Text(
-                                                'Supporting text',
-                                                style: SafeGoogleFont (
-                                                  'Roboto',
-                                                  fontSize: 12*ffem,
-                                                  fontWeight: FontWeight.w700,
-                                                  height: 1.3333333333*ffem/fem,
-                                                  color: Color(0xff4d4639),
-                                                ),
-                                              ),
-                                            ),
                                           ],
                                         ),
                                       ),
@@ -446,23 +388,6 @@ class RegistroCorreo extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
-              ),
-            ),
-            Positioned(
-              // navegacinofm (123:37405)
-              left: 152*fem,
-              top: 878*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 109*fem,
-                  height: 4*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(100*fem),
-                      color: Color(0xff000000),
-                    ),
-                  ),
                 ),
               ),
             ),
