@@ -49,20 +49,26 @@ class _Agenda extends State<Agenda> {
                     ElevatedButton(
                       onPressed: () => Get.toNamed(AppRoutes.nuevaTarea)!.then(
                         (value) {
-                          setState(() {
-                            recordatorios.add(Get.arguments);
-                          });
+                          print(Get.arguments);
+                          if (Get.arguments != null) {
+                            setState(() {
+                              recordatorios.add(Get.arguments);
+                            });
+                          }
                         },
                       ),
                       style: ButtonStyle(
-                        padding: const MaterialStatePropertyAll(EdgeInsets.all(0)),
+                        padding:
+                            const MaterialStatePropertyAll(EdgeInsets.all(0)),
                         backgroundColor:
                             const MaterialStatePropertyAll(MyColors.primary),
                         elevation: const MaterialStatePropertyAll(5),
                         shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(5))),
-                        minimumSize:const  MaterialStatePropertyAll(Size(32, 32)),
-                        maximumSize:const  MaterialStatePropertyAll(Size(40, 40)),
+                        minimumSize:
+                            const MaterialStatePropertyAll(Size(32, 32)),
+                        maximumSize:
+                            const MaterialStatePropertyAll(Size(40, 40)),
                       ),
                       child: const Icon(
                         Icons.add,
@@ -99,7 +105,6 @@ class _Agenda extends State<Agenda> {
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
-                                    
                                   ),
                                 ),
                               ),
@@ -120,7 +125,7 @@ class _Agenda extends State<Agenda> {
                           ),
                           title: Text(
                             recordatorio[0],
-                            style:const  TextStyle(fontWeight: FontWeight.bold),
+                            style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Text(timeFormatter(recordatorio[4])),
                           tileColor: MyColors.tertiary,

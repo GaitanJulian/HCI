@@ -2,6 +2,7 @@ import 'package:app/utils/my_colors.dart';
 import '../widgets/nueva_tarea.dart';
 import 'package:flutter/material.dart';
 import '../widgets/agenda.dart';
+import '../screens/help.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screens = [Agenda(), NuevaTarea()];
+    final screens = [Agenda(), HelpScreen()];
 
     return Scaffold(
       body: IndexedStack(
