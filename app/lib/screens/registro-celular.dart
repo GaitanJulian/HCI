@@ -33,64 +33,6 @@ class RegistroCelular extends StatelessWidget {
                 child: Stack(
                   children: [
                     Positioned(
-                      // devicedeviceframecomponentssta (I103:37387;1:52422)
-                      left: 24*fem,
-                      top: 20*fem,
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(0*fem, 2*fem, 0*fem, 2*fem),
-                        width: 364*fem,
-                        height: 24*fem,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              // timeqhZ (I103:37387;1:52422;50758:11370)
-                              margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 289*fem, 0*fem),
-                              child: Text(
-                                '9:30',
-                                style: SafeGoogleFont (
-                                  'Roboto',
-                                  fontSize: 14*ffem,
-                                  fontWeight: FontWeight.w500,
-                                  height: 1.4285714286*ffem/fem,
-                                  letterSpacing: 0.14*fem,
-                                  color: Color(0xff1e1b16),
-                                ),
-                              ),
-                            ),
-                            Container(
-                              // righticonswkb (I103:37387;1:52422;50758:11372)
-                              margin: EdgeInsets.fromLTRB(0*fem, 3*fem, 0*fem, 0*fem),
-                              width: 46*fem,
-                              height: 17*fem,
-                              child: Image.asset(
-                                'assets/espacio-de-trabajo/images/right-icons-xQf.png',
-                                width: 46*fem,
-                                height: 17*fem,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      // homefAo (I103:37387;1:52423;1:52428)
-                      left: 170*fem,
-                      top: 882*fem,
-                      child: Align(
-                        child: SizedBox(
-                          width: 72*fem,
-                          height: 2*fem,
-                          child: Container(
-                            decoration: BoxDecoration (
-                              borderRadius: BorderRadius.circular(8*fem),
-                              color: Color(0xff1e1b16),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
                       // ingresatucelularocorreoN5D (107:37442)
                       left: 64*fem,
                       top: 98*fem,
@@ -321,20 +263,6 @@ class RegistroCelular extends StatelessWidget {
                                               color: Color(0xff4d4639),
                                             ),
                                           ),
-                                          Container(
-                                            // supportingtext55R (I111:37275;1:23776)
-                                            margin: EdgeInsets.fromLTRB(16*fem, 0*fem, 0*fem, 0*fem),
-                                            child: Text(
-                                              'Supporting text',
-                                              style: SafeGoogleFont (
-                                                'Roboto',
-                                                fontSize: 12*ffem,
-                                                fontWeight: FontWeight.w700,
-                                                height: 1.3333333333*ffem/fem,
-                                                color: Color(0xff4d4639),
-                                              ),
-                                            ),
-                                          ),
                                         ],
                                       ),
                                     ),
@@ -399,20 +327,6 @@ class RegistroCelular extends StatelessWidget {
                                               color: Color(0xff4d4639),
                                             ),
                                           ),
-                                          Container(
-                                            // supportingtextEW3 (I111:37353;1:23776)
-                                            margin: EdgeInsets.fromLTRB(16*fem, 0*fem, 0*fem, 0*fem),
-                                            child: Text(
-                                              'Supporting text',
-                                              style: SafeGoogleFont (
-                                                'Roboto',
-                                                fontSize: 12*ffem,
-                                                fontWeight: FontWeight.w700,
-                                                height: 1.3333333333*ffem/fem,
-                                                color: Color(0xff4d4639),
-                                              ),
-                                            ),
-                                          ),
                                         ],
                                       ),
                                     ),
@@ -446,23 +360,6 @@ class RegistroCelular extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
-              ),
-            ),
-            Positioned(
-              // navegacinEeT (107:37441)
-              left: 152*fem,
-              top: 878*fem,
-              child: Align(
-                child: SizedBox(
-                  width: 109*fem,
-                  height: 4*fem,
-                  child: Container(
-                    decoration: BoxDecoration (
-                      borderRadius: BorderRadius.circular(100*fem),
-                      color: Color(0xff000000),
-                    ),
-                  ),
                 ),
               ),
             ),
