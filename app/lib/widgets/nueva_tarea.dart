@@ -19,6 +19,14 @@ class _NuevaTarea extends State<NuevaTarea> {
 
   late List datos;
 
+  final TextEditingController titleController =
+        TextEditingController();
+
+  final Map<int,String> periodo = {
+    0: 'AM',
+    1: 'PM',
+  };
+
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
         context: context,
@@ -46,14 +54,13 @@ class _NuevaTarea extends State<NuevaTarea> {
 
   @override
   Widget build(BuildContext context) {
-    final TextEditingController titleController =
-        TextEditingController(text: 'Recordatorio');
+    
 
     final TextEditingController dateController = TextEditingController(
         text: '${selectedDate.day}/${selectedDate.month}/${selectedDate.year}');
 
     final TextEditingController timeController = TextEditingController(
-        text: '${selectedTime.hour}:${selectedTime.minute}');
+        text: '${selectedTime.hourOfPeriod}:${selectedTime.minute} ${periodo[selectedTime.period.index]}');
 
     return Scaffold(
       appBar: AppBar(
@@ -207,7 +214,7 @@ class _NuevaTarea extends State<NuevaTarea> {
                       ),
                       DropdownMenuItem(
                         value: 2,
-                        child: Text('Hogar'),
+                        child: Text('Hogareño'),
                       ),
                     ],
                     value: tipo,
@@ -335,6 +342,7 @@ class _NuevaTarea extends State<NuevaTarea> {
                   ),
                   onPressed: () {
                     datos = [titleController.text, prioridad, tipo, selectedDate, selectedTime];
+                    Get.offNamed(AppRoutes.confirmScreen, arguments: datos);
                   },
                   child: const Padding(
                     padding: EdgeInsets.only(top: 8, bottom: 8),

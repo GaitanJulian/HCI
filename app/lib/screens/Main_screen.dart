@@ -26,7 +26,9 @@ class _MainScreenState extends State<MainScreen> {
         selectedFontSize: 15,
         selectedItemColor: MyColors.primary,
         selectedIconTheme: const IconThemeData(color: MyColors.secondary),
-        backgroundColor:  MyColors.fortiary,
+        backgroundColor:  MyColors.tertiary,
+        selectedLabelStyle: const TextStyle(fontSize: 20),
+        unselectedFontSize: 16,
         currentIndex: selectedNavIndex,
         onTap: (newIndex) {
           setState(() {
@@ -35,14 +37,14 @@ class _MainScreenState extends State<MainScreen> {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.article_outlined, size: 30,),
-            activeIcon: Icon(Icons.article, size: 30,),
+            icon: Icon(Icons.article, size: 30,),
+            activeIcon: Icon(Icons.article_outlined, size: 32,),
             label: 'Agenda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today_outlined, size: 30,),
-            activeIcon: Icon(Icons.calendar_today, size: 30,),
-            label: 'Calendario',
+            icon: Icon(Icons.help_center, size: 30,),
+            activeIcon: Icon(Icons.help_center_outlined, size: 32,),
+            label: 'Ayuda',
           )
         ],
       ),
