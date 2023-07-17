@@ -97,7 +97,7 @@ class Onboarding extends StatelessWidget {
                                     'Tu compañero confiable para recordar lo importante en la vida.',
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.roboto(
-                                      fontSize: 16 * ffem,
+                                      fontSize: 15 * ffem,
                                       fontWeight: FontWeight.w400,
                                       height: 1.5 * ffem / fem,
                                       color: Color(0xff000000),
