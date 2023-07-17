@@ -48,8 +48,7 @@ class _Agenda extends State<Agenda> {
                     ),
                     ElevatedButton(
                       onPressed: () => Get.toNamed(AppRoutes.nuevaTarea)!.then(
-                        (value) {
-                          print(Get.arguments);
+                        (value) {                          
                           if (Get.arguments != null) {
                             setState(() {
                               recordatorios.add(Get.arguments);
@@ -80,7 +79,7 @@ class _Agenda extends State<Agenda> {
             ),
             const SizedBox(height: 16),
             recordatorios.isEmpty
-                ? const Text('No hay recordatorios')
+                ? const Text('No hay recordatorios', style: TextStyle(fontSize: 20),)
                 : Column(
                     children: recordatorios.map(
                     (recordatorio) {
