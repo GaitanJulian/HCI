@@ -14,11 +14,47 @@ class _NuevaTarea extends State<NuevaTarea> {
   int prioridad = 0;
   int tipo = 0;
 
-  final TextEditingController titleController =
-      TextEditingController(text: 'Recordatorio');
+  late DateTime selectedDate = DateTime.now();
+  late TimeOfDay selectedTime = TimeOfDay.now();
+
+  late List datos;
+
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+        context: context,
+        initialDate: selectedDate,
+        firstDate: DateTime(1900, 1, 1),
+        lastDate: DateTime.now());
+    if (picked != null && picked != selectedDate) {
+      setState(() {
+        selectedDate = picked;
+      });
+    }
+  }
+
+  Future<void> _selectTime(BuildContext context) async {
+    final TimeOfDay? picked = await showTimePicker(
+      context: context,
+      initialTime: selectedTime,
+    );
+    if (picked != null && picked != selectedTime) {
+      setState(() {
+        selectedTime = picked;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController titleController =
+        TextEditingController(text: 'Recordatorio');
+
+    final TextEditingController dateController = TextEditingController(
+        text: '${selectedDate.day}/${selectedDate.month}/${selectedDate.year}');
+
+    final TextEditingController timeController = TextEditingController(
+        text: '${selectedTime.hour}:${selectedTime.minute}');
+
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
@@ -38,7 +74,7 @@ class _NuevaTarea extends State<NuevaTarea> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16, top: 8),
               child: Column(
                 children: [
                   const Align(
@@ -183,7 +219,129 @@ class _NuevaTarea extends State<NuevaTarea> {
                   ),
                 ),
               ),
-            )
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: EdgeInsets.only(left: 16, right: 16),
+              child: Material(
+                elevation: 5,
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        readOnly: true,
+                        controller: dateController,
+                        decoration: InputDecoration(
+                          icon: ElevatedButton(
+                              style: ButtonStyle(
+                                elevation: const MaterialStatePropertyAll(5),
+                                backgroundColor: const MaterialStatePropertyAll(
+                                    MyColors.primary),
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    side: const BorderSide(
+                                        color: MyColors.primary),
+                                  ),
+                                ),
+                              ),
+                              onPressed: () => _selectDate(context),
+                              child: const Padding(
+                                padding: EdgeInsets.only(top: 8, bottom: 8),
+                                child: Icon(
+                                  Icons.calendar_month,
+                                  color: MyColors.tertiary,
+                                  size: 40,
+                                ),
+                              )),
+                          label: const Text('Fecha del recordatorio'),
+                          labelStyle: const TextStyle(
+                              color: MyColors.primary, fontSize: 20),
+                          enabledBorder: const OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: MyColors.primary,
+                            ),
+                          ),
+                          focusedBorder: const OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: MyColors.primary,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      TextFormField(
+                        readOnly: true,
+                        controller: timeController,
+                        decoration: InputDecoration(
+                          icon: ElevatedButton(
+                              style: ButtonStyle(
+                                elevation: const MaterialStatePropertyAll(5),
+                                backgroundColor: const MaterialStatePropertyAll(
+                                    MyColors.primary),
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    side: const BorderSide(
+                                        color: MyColors.primary),
+                                  ),
+                                ),
+                              ),
+                              onPressed: () => _selectTime(context),
+                              child: const Padding(
+                                padding: EdgeInsets.only(top: 8, bottom: 8),
+                                child: Icon(
+                                  Icons.access_time,
+                                  color: MyColors.tertiary,
+                                  size: 40,
+                                ),
+                              )),
+                          label: const Text('Hora del recordatorio'),
+                          labelStyle: const TextStyle(
+                              color: MyColors.primary, fontSize: 20),
+                          enabledBorder: const OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: MyColors.primary,
+                            ),
+                          ),
+                          focusedBorder: const OutlineInputBorder(
+                            borderSide: BorderSide(
+                              color: MyColors.primary,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Center(
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    elevation: const MaterialStatePropertyAll(5),
+                    backgroundColor:
+                        const MaterialStatePropertyAll(MyColors.primary),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: const BorderSide(color: MyColors.primary),
+                      ),
+                    ),
+                  ),
+                  onPressed: () {
+                    datos = [titleController.text, prioridad, tipo, selectedDate, selectedTime];
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 8, bottom: 8),
+                    child: Text('Siguiente', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: MyColors.white),)
+                  )),
+            ),
+            const SizedBox(height: 16),
           ],
         ),
       ),

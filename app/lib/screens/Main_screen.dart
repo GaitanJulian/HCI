@@ -40,8 +40,8 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Agenda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month_outlined, size: 30,),
-            activeIcon: Icon(Icons.calendar_month, size: 30,),
+            icon: Icon(Icons.calendar_today_outlined, size: 30,),
+            activeIcon: Icon(Icons.calendar_today, size: 30,),
             label: 'Calendario',
           )
         ],
