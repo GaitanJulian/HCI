@@ -9,6 +9,8 @@ import '../screens/cdigo-de-verificacin.dart';
 import '../screens/registro-celular.dart';
 import '../screens/registro-correo.dart';
 import '../screens/seleccion-de-usuario-a-revisar.dart';
+import '../widgets/confirmacion.dart';
+import '../screens/help.dart';
 
 class AppRoutes {
   AppRoutes._();
@@ -22,6 +24,8 @@ class AppRoutes {
   static const String registroCelular = '/registro-celular';
   static const String registroCorreo = '/registro-correo';
   static const String seleccionDeUsuarioARevisar = '/seleccion-de-usuario-a-revisar';
+  static const String confirmScreen = '/confirm';
+  static const String helpScreen = '/help';
 
   static final Map<String, WidgetBuilder> routes = {
     agenda: (BuildContext context) => Agenda(),
@@ -33,5 +37,7 @@ class AppRoutes {
     registroCelular: (BuildContext context) => RegistroCelular(),
     registroCorreo: (BuildContext context) => RegistroCorreo(),
     seleccionDeUsuarioARevisar: (BuildContext context) => SeleccionDeUsuarioARevisar(),
+    confirmScreen: (BuildContext context) => const ConfirmPage(),
+    helpScreen: (BuildContext context) => const HelpScreen()
   };
 }

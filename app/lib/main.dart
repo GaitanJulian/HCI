@@ -1,3 +1,4 @@
+import 'package:app/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'routes/app_routes.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Proyecto HCI',
       theme: ThemeData(        
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: MyColors.secondary),
         useMaterial3: true,
       ),
       initialRoute: AppRoutes.onboarding,

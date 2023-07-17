@@ -2,6 +2,7 @@ import 'package:app/utils/my_colors.dart';
 import '../widgets/nueva_tarea.dart';
 import 'package:flutter/material.dart';
 import '../widgets/agenda.dart';
+import '../screens/help.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screens = [Agenda(), NuevaTarea()];
+    final screens = [Agenda(), HelpScreen()];
 
     return Scaffold(
       body: IndexedStack(
@@ -26,7 +27,9 @@ class _MainScreenState extends State<MainScreen> {
         selectedFontSize: 15,
         selectedItemColor: MyColors.primary,
         selectedIconTheme: const IconThemeData(color: MyColors.secondary),
-        backgroundColor:  MyColors.fortiary,
+        backgroundColor:  MyColors.tertiary,
+        selectedLabelStyle: const TextStyle(fontSize: 20),
+        unselectedFontSize: 16,
         currentIndex: selectedNavIndex,
         onTap: (newIndex) {
           setState(() {
@@ -35,14 +38,14 @@ class _MainScreenState extends State<MainScreen> {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.article_outlined, size: 30,),
-            activeIcon: Icon(Icons.article, size: 30,),
+            icon: Icon(Icons.article, size: 30,),
+            activeIcon: Icon(Icons.article_outlined, size: 32,),
             label: 'Agenda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_month_outlined, size: 30,),
-            activeIcon: Icon(Icons.calendar_month, size: 30,),
-            label: 'Calendario',
+            icon: Icon(Icons.help_center, size: 30,),
+            activeIcon: Icon(Icons.help_center_outlined, size: 32,),
+            label: 'Ayuda',
           )
         ],
       ),
