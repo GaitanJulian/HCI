@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../routes/app_routes.dart';
 import '../utils/my_colors.dart';
+import '../utils/methods.dart';
 
 class NuevaTarea extends StatefulWidget {
   const NuevaTarea({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class NuevaTarea extends StatefulWidget {
 
 class _NuevaTarea extends State<NuevaTarea> {
   int prioridad = 0;
-  int tipo = 0;
+  int tipoCat = 0;
 
   late DateTime selectedDate = DateTime.now();
   late TimeOfDay selectedTime = TimeOfDay.now();
@@ -203,24 +204,17 @@ class _NuevaTarea extends State<NuevaTarea> {
                     iconSize: 40,
                     isExpanded: true,
                     isDense: true,
-                    items: const [
-                      DropdownMenuItem(
-                        value: 0,
-                        child: Text('Laboral'),
-                      ),
-                      DropdownMenuItem(
-                        value: 1,
-                        child: Text('Medico'),
-                      ),
-                      DropdownMenuItem(
-                        value: 2,
-                        child: Text('Hogareño'),
-                      ),
-                    ],
-                    value: tipo,
+                    items: tipos.values.toList().map((categoria) {
+                      int index = tipos.values.toList().indexOf(categoria);
+                      return DropdownMenuItem(
+                        value: index,
+                        child: Text(categoria),
+                      );
+                    }).toList(),
+                    value: tipoCat,
                     onChanged: (value) {
                       setState(() {
-                        tipo = value!;
+                        tipoCat = value!;
                       });
                     },
                   ),
@@ -229,7 +223,7 @@ class _NuevaTarea extends State<NuevaTarea> {
             ),
             const SizedBox(height: 16),
             Padding(
-              padding: EdgeInsets.only(left: 16, right: 16),
+              padding: const EdgeInsets.only(left: 16, right: 16),
               child: Material(
                 elevation: 5,
                 child: Container(
@@ -341,7 +335,7 @@ class _NuevaTarea extends State<NuevaTarea> {
                     ),
                   ),
                   onPressed: () {
-                    datos = [titleController.text, prioridad, tipo, selectedDate, selectedTime];
+                    datos = [titleController.text, prioridad, tipoCat, selectedDate, selectedTime];
                     Get.offNamed(AppRoutes.confirmScreen, arguments: datos);
                   },
                   child: const Padding(

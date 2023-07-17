@@ -40,3 +40,8 @@ Color priorityColor(int priority){
 
   return prioridades[priority]!;
 }
+
+void addCategory(String categoria){
+  int lastKey = tipos.keys.toList().last;
+  tipos[lastKey+1] = categoria;
+}
