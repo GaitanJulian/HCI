@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
+import '../routes/app_routes.dart';
+import '../utils/my_colors.dart';
+import '../utils/methods.dart';
 
 class Onboarding extends StatelessWidget {
   @override
@@ -128,7 +132,7 @@ class Onboarding extends StatelessWidget {
                 ),
                 SizedBox(height: 12 * fem),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(AppRoutes.registroCelular),
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.zero,
                   ),
@@ -155,7 +159,7 @@ class Onboarding extends StatelessWidget {
                 ),
                 SizedBox(height: 30 * fem),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(AppRoutes.inicioDeSesin),
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.zero,
                   ),

@@ -3,6 +3,10 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:app/utils.dart';
+import 'package:get/get.dart';
+import '../routes/app_routes.dart';
+import '../utils/my_colors.dart';
+import '../utils/methods.dart';
 
 class CdigoDeVerificacin extends StatelessWidget {
   @override
@@ -10,7 +14,10 @@ class CdigoDeVerificacin extends StatelessWidget {
     double baseWidth = 412;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
+
+    return Material(
+      child: Scaffold(
+        body:  Container(
       width: double.infinity,
       child: Container(
         // cdigodeverificacin4As (163:40958)
@@ -34,15 +41,19 @@ class CdigoDeVerificacin extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(
-                      // atrsm7D (163:40972)
-                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 360*fem, 21*fem),
-                      width: 16*fem,
-                      height: 16*fem,
-                      child: Image.asset(
-                        'assets/espacio-de-trabajo/images/atrs.png',
-                        width: 16*fem,
-                        height: 16*fem,
+                    InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoutes.registroCelular);
+                      },
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 360 * fem, 21 * fem),
+                        width: 24 * fem,
+                        height: 24 * fem,
+                        child: Image.asset(
+                          'assets/espacio-de-trabajo/images/atrs-Vhy.png',
+                          width: 24 * fem,
+                          height: 24 * fem,
+                        ),
                       ),
                     ),
                     Center(
@@ -189,6 +200,10 @@ class CdigoDeVerificacin extends StatelessWidget {
           ],
         ),
       ),
-          );
+          )
+      )
+    );
+
+          
   }
 }
