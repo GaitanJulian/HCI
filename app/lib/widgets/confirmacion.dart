@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../utils/my_colors.dart';
 import '../utils/methods.dart';
 
+
 class ConfirmPage extends StatefulWidget {
   const ConfirmPage({super.key});
 
@@ -141,9 +142,12 @@ class _ConfirmPageState extends State<ConfirmPage> {
                       ),
                     ),
                   ),
-                  onPressed: () {
+                  onPressed: () async {
+                    addRecord(datos);
+                    Get.back();
+                    Get.back();
                     
-                    Get.back(result: datos);
+
                   },
                   child: const Padding(
                     padding: EdgeInsets.only(top: 8, bottom: 8),

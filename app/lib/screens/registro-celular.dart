@@ -73,8 +73,8 @@ class RegistroCelular extends StatelessWidget {
                             height: 24 * fem,
                             child: Image.asset(
                               'assets/espacio-de-trabajo/images/atrs-Vhy.png',
-                              width: 24 * fem,
-                              height: 24 * fem,
+                              width: 40,
+                              height: 40,
                             ),
                           ),
                         ),
