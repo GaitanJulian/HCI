@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: MyColors.secondary),
         useMaterial3: true,
       ),
-      initialRoute: AppRoutes.mainScreen,
+      initialRoute: AppRoutes.onboarding,
       routes: AppRoutes.routes,
     );
   }

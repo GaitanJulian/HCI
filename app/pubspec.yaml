@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get: ^4.6.5
+  google_fonts: ^5.1.0
   intl: ^0.18.1
   accordion: ^2.5.1
 
@@ -63,6 +64,79 @@ flutter:
 
   assets:
     - assets/
+    
+    - assets/espacio-de-trabajo/images/atrs.png
+    - assets/espacio-de-trabajo/images/right-icons.png
+    - assets/espacio-de-trabajo/images/horizontal-middle-inset.png
+    - assets/espacio-de-trabajo/images/icons-modeedit24px.png
+    - assets/espacio-de-trabajo/images/image-12.png
+    - assets/espacio-de-trabajo/images/agenda.png
+    - assets/espacio-de-trabajo/images/ajustes.png
+    - assets/espacio-de-trabajo/images/icons-modeedit24px-5Cj.png
+    - assets/espacio-de-trabajo/images/horizontal-middle-inset-mn7.png
+    - assets/espacio-de-trabajo/images/right-icons-SVV.png
+    - assets/espacio-de-trabajo/images/icons-add24px.png
+    - assets/espacio-de-trabajo/images/right-icons-n79.png
+    - assets/espacio-de-trabajo/images/icon-container.png
+    - assets/espacio-de-trabajo/images/repeat.png
+    - assets/espacio-de-trabajo/images/icon-container-8LX.png
+    - assets/espacio-de-trabajo/images/auto-group-5xq5.png
+    - assets/espacio-de-trabajo/images/line-system-settings-line.png
+    - assets/espacio-de-trabajo/images/header.png
+    - assets/espacio-de-trabajo/images/soporte.png
+    - assets/espacio-de-trabajo/images/line-media-notification-2-line.png
+    - assets/espacio-de-trabajo/images/trailing-icon.png
+    - assets/espacio-de-trabajo/images/icon.png
+    - assets/espacio-de-trabajo/images/ajustes-C8F.png
+    - assets/espacio-de-trabajo/images/atrs-Jp7.png
+    - assets/espacio-de-trabajo/images/cerrar.png
+    - assets/espacio-de-trabajo/images/right-icons-FGb.png
+    - assets/espacio-de-trabajo/images/icon-W3R.png
+    - assets/espacio-de-trabajo/images/right-icons-Dv7.png
+    - assets/espacio-de-trabajo/images/right-icons-XKm.png
+    - assets/espacio-de-trabajo/images/image-6.png
+    - assets/espacio-de-trabajo/images/line-system-search-line.png
+    - assets/espacio-de-trabajo/images/cerrar-4ZD.png
+    - assets/espacio-de-trabajo/images/right-icons-caj.png
+    - assets/espacio-de-trabajo/images/atrs-CaB.png
+    - assets/espacio-de-trabajo/images/line-finance-money-dollar-box-line.png
+    - assets/espacio-de-trabajo/images/calendario.png
+    - assets/espacio-de-trabajo/images/image-6-yxs.png
+    - assets/espacio-de-trabajo/images/icon-b51.png
+    - assets/espacio-de-trabajo/images/horizontal-full-width.png
+    - assets/espacio-de-trabajo/images/image-7.png
+    - assets/espacio-de-trabajo/images/icon-dC3.png
+    - assets/espacio-de-trabajo/images/atrs-Vhy.png
+    - assets/espacio-de-trabajo/images/soporte-EKR.png
+    - assets/espacio-de-trabajo/images/right-icons-aeB.png
+    - assets/espacio-de-trabajo/images/calendario-YL7.png
+    - assets/espacio-de-trabajo/images/avatars-3davatar26.png
+    - assets/espacio-de-trabajo/images/horizontal-middle-inset-59y.png
+    - assets/espacio-de-trabajo/images/avatars-3davatar13.png
+    - assets/espacio-de-trabajo/images/right-icons-T9q.png
+    - assets/espacio-de-trabajo/images/calendario-mZq.png
+    - assets/espacio-de-trabajo/images/icon-container-XJ7.png
+    - assets/espacio-de-trabajo/images/viewagenda.png
+    - assets/espacio-de-trabajo/images/icon-container-mLj.png
+    - assets/espacio-de-trabajo/images/icon-Rw5.png
+    - assets/espacio-de-trabajo/images/agenda-2Yo.png
+    - assets/espacio-de-trabajo/images/cerrar-96F.png
+    - assets/espacio-de-trabajo/images/right-icons-bBm.png
+    - assets/espacio-de-trabajo/images/right-icons-aBq.png
+    - assets/espacio-de-trabajo/images/creacin-de-recordatorio.png
+    - assets/espacio-de-trabajo/images/calendario-no1.png
+    - assets/espacio-de-trabajo/images/auto-group-ja5m.png
+    - assets/espacio-de-trabajo/images/icons-checkboxoutlineblank.png
+    - assets/espacio-de-trabajo/images/image-6-FYT.png
+    - assets/espacio-de-trabajo/images/line-system-arrow-left-line.png
+    - assets/espacio-de-trabajo/images/ajustes-Pcb.png
+    - assets/espacio-de-trabajo/images/agenda-H8s.png
+    - assets/espacio-de-trabajo/images/avatars-3davatar28.png
+    - assets/espacio-de-trabajo/images/soporte-dVh.png
+    - assets/espacio-de-trabajo/images/right-icons-xQf.png
+    - assets/espacio-de-trabajo/images/avatars-3davatar25.png
+    - assets/espacio-de-trabajo/images/image-11.png
+    - assets/espacio-de-trabajo/images/image-10.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
