@@ -50,13 +50,7 @@ class _Agenda extends State<Agenda> {
                       onPressed: () => Get.toNamed(AppRoutes.nuevaTarea)!.then(
                         (value) {setState(() {
                           
-                        }); /*                        
-                          if (Get.arguments != null) {
-                            setState(() {
-                              recordatorios.add(Get.arguments);
-                            });
-                          }
-                        */},
+                        });},
                       ),
                       style: ButtonStyle(
                         padding:

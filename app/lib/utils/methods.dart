@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 var f = NumberFormat("00.#", "en_US");
 
 List recordatorios = [];
+List perfiles = ['Yo'];
 
 final Map<int,String> periodo = {
     0: 'AM',
@@ -55,9 +56,21 @@ void removeRecord(List datos){
   recordatorios.remove(datos);
 }
 
+void addPerfil(String datos){
+  perfiles.add(datos);
+}
+
+void removePerfil(String datos){
+  perfiles.remove(datos);
+}
+
 void addCategory(String categoria){
   int lastKey = tipos.keys.toList().last;
   tipos[lastKey+1] = categoria;
+}
+
+void removeCategory(String categoria){
+  tipos.removeWhere((key, value) => value == categoria );
 }
 
 

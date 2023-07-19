@@ -18,6 +18,10 @@ class CdigoDeVerificacin extends StatelessWidget {
     return Material(
       child: Scaffold(
         appBar: AppBar(
+          iconTheme: const IconThemeData(
+          color: Colors.black,
+          size: 20,
+        ),
           backgroundColor: MyColors.white,
         ),
         body:  Container(
@@ -103,7 +107,7 @@ class CdigoDeVerificacin extends StatelessWidget {
                       // siguientewrF (163:40965)
                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 592*fem),
                       child: TextButton(
-                        onPressed: () => Get.toNamed(AppRoutes.mainScreen),
+                        onPressed: () => Get.toNamed(AppRoutes.seleccionDeUsuarioARevisar),
                         style: TextButton.styleFrom (
                           padding: EdgeInsets.zero,
                         ),
