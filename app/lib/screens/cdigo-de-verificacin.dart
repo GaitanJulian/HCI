@@ -79,7 +79,7 @@ class CdigoDeVerificacin extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
+                            Container(
                             // cdigodeverificacinhf5 (163:40969)
                             margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 11.5*fem),
                             child: Text(
@@ -93,6 +93,7 @@ class CdigoDeVerificacin extends StatelessWidget {
                               ),
                             ),
                           ),
+
                           Container(
                             // correoelectrniconwR (163:40970)
                             width: double.infinity,
@@ -102,60 +103,13 @@ class CdigoDeVerificacin extends StatelessWidget {
                                 topRight: Radius.circular(4*fem),
                               ),
                             ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                TextButton(
-                                  // textfieldvGw (I163:40970;1:23769)
-                                  onPressed: () {},
-                                  style: TextButton.styleFrom (
-                                    padding: EdgeInsets.zero,
-                                  ),
-                                  child: Container(
-                                    width: double.infinity,
-                                    height: 56*fem,
-                                    decoration: BoxDecoration (
-                                      color: Color(0xfff3e4bf),
-                                      borderRadius: BorderRadius.only (
-                                        topLeft: Radius.circular(4*fem),
-                                        topRight: Radius.circular(4*fem),
-                                      ),
-                                    ),
-                                    child: Container(
-                                      // statelayerSFH (I163:40970;1:23770)
-                                      padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 16*fem),
-                                      width: double.infinity,
-                                      height: double.infinity,
-                                      decoration: BoxDecoration (
-                                        borderRadius: BorderRadius.only (
-                                          topLeft: Radius.circular(4*fem),
-                                          topRight: Radius.circular(4*fem),
-                                        ),
-                                      ),
-                                      child: Text(
-                                        'Código de verificación',
-                                        style: SafeGoogleFont (
-                                          'Roboto',
-                                          fontSize: 16*ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.5*ffem/fem,
-                                          color: Color(0xff4d4639),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Container(
-                                  // activeindicatorWW3 (I163:40970;1:23774)
-                                  margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 3*fem),
-                                  width: double.infinity,
-                                  height: 1*fem,
-                                  decoration: BoxDecoration (
-                                    color: Color(0xff4d4639),
-                                  ),
-                                ),
-                              ],
+                         // ignore: prefer_const_constructors
+                         child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Codigo: ',
+                              hintStyle: TextStyle(color: Colors.grey),
                             ),
+                          ),
                           ),
                         ],
                       ),
@@ -164,7 +118,7 @@ class CdigoDeVerificacin extends StatelessWidget {
                       // siguientewrF (163:40965)
                       margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 0*fem, 592*fem),
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed(AppRoutes.mainScreen),
                         style: TextButton.styleFrom (
                           padding: EdgeInsets.zero,
                         ),

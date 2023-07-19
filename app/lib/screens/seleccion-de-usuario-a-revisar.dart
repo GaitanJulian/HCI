@@ -3,6 +3,10 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:app/utils.dart';
+import 'package:get/get.dart';
+import '../routes/app_routes.dart';
+import '../utils/my_colors.dart';
+import '../utils/methods.dart';
 
 class SeleccionDeUsuarioARevisar extends StatelessWidget {
   @override
@@ -62,7 +66,7 @@ class SeleccionDeUsuarioARevisar extends StatelessWidget {
                             width: 113 * fem,
                             height: 32 * fem,
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () => Get.toNamed(AppRoutes.mainScreen),
                               style: TextButton.styleFrom(
                                 padding: EdgeInsets.zero,
                               ),
@@ -90,7 +94,7 @@ class SeleccionDeUsuarioARevisar extends StatelessWidget {
                           width: 113 * fem,
                           height: 113 * fem,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () => Get.toNamed(AppRoutes.mainScreen),
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.zero,
                             ),
@@ -171,7 +175,7 @@ class SeleccionDeUsuarioARevisar extends StatelessWidget {
                           width: 113 * fem,
                           height: 113 * fem,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () => Get.toNamed(AppRoutes.mainScreen),
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.zero,
                             ),
@@ -264,7 +268,7 @@ class SeleccionDeUsuarioARevisar extends StatelessWidget {
                       left: 149 * fem,
                       top: 194 * fem,
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed(AppRoutes.mainScreen),
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.zero,
                         ),
@@ -275,9 +279,11 @@ class SeleccionDeUsuarioARevisar extends StatelessWidget {
                             child: SizedBox(
                               width: 114 * fem,
                               height: 114 * fem,
+                              
                               child: Image.asset(
                                 'assets/espacio-de-trabajo/images/avatars-3davatar28.png',
                                 fit: BoxFit.cover,
+                                
                               ),
                             ),
                           ),
@@ -288,7 +294,7 @@ class SeleccionDeUsuarioARevisar extends StatelessWidget {
                       left: 149 * fem,
                       top: 475 * fem,
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed(AppRoutes.mainScreen),
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.zero,
                         ),
