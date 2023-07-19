@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
+
+var f = NumberFormat("00.#", "en_US");
+
+List recordatorios = [];
 
 final Map<int,String> periodo = {
     0: 'AM',
@@ -28,7 +34,7 @@ String dateFormatter(DateTime date) {
 }
 
 String timeFormatter(TimeOfDay time) {
-  return '${time.hourOfPeriod}:${time.minute} ${periodo[time.period.index]}';
+  return '${time.hourOfPeriod}:${f.format(time.minute)} ${periodo[time.period.index]}';
 }
 
 Color priorityColor(int priority){
@@ -41,7 +47,17 @@ Color priorityColor(int priority){
   return prioridades[priority]!;
 }
 
+void addRecord(List datos){
+  recordatorios.add(datos);
+}
+
+void removeRecord(List datos){
+  recordatorios.remove(datos);
+}
+
 void addCategory(String categoria){
   int lastKey = tipos.keys.toList().last;
   tipos[lastKey+1] = categoria;
 }
+
+

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../routes/app_routes.dart';
 import '../utils/my_colors.dart';
 import '../utils/methods.dart';
+import 'package:intl/intl.dart';
 
 class NuevaTarea extends StatefulWidget {
   const NuevaTarea({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _NuevaTarea extends State<NuevaTarea> {
   late TimeOfDay selectedTime = TimeOfDay.now();
 
   late List datos;
-
+  final f = NumberFormat("00.#", "en_US");
   final TextEditingController titleController =
         TextEditingController();
 
@@ -61,7 +62,7 @@ class _NuevaTarea extends State<NuevaTarea> {
         text: '${selectedDate.day}/${selectedDate.month}/${selectedDate.year}');
 
     final TextEditingController timeController = TextEditingController(
-        text: '${selectedTime.hourOfPeriod}:${selectedTime.minute} ${periodo[selectedTime.period.index]}');
+        text: '${selectedTime.hourOfPeriod}:${f.format(selectedTime.minute)} ${periodo[selectedTime.period.index]}');
 
     return Scaffold(
       appBar: AppBar(
@@ -336,7 +337,7 @@ class _NuevaTarea extends State<NuevaTarea> {
                   ),
                   onPressed: () {
                     datos = [titleController.text, prioridad, tipoCat, selectedDate, selectedTime];
-                    Get.offNamed(AppRoutes.confirmScreen, arguments: datos);
+                    Get.toNamed(AppRoutes.confirmScreen, arguments: datos);
                   },
                   child: const Padding(
                     padding: EdgeInsets.only(top: 8, bottom: 8),

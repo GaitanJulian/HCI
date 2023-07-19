@@ -2,6 +2,7 @@ import 'package:app/utils/my_colors.dart';
 import 'package:flutter/material.dart';
 import '../widgets/agenda.dart';
 import '../screens/help.dart';
+import '../screens/settings.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screens = [Agenda(), HelpScreen()];
+    final screens = [Agenda(), HelpScreen(), Settings()];
 
     return Scaffold(
       body: IndexedStack(
@@ -45,6 +46,11 @@ class _MainScreenState extends State<MainScreen> {
             icon: Icon(Icons.help_center, size: 30,),
             activeIcon: Icon(Icons.help_center_outlined, size: 32,),
             label: 'Ayuda',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings, size: 30,),
+            activeIcon: Icon(Icons.settings_outlined, size: 32,),
+            label: 'Ajustes',
           )
         ],
       ),

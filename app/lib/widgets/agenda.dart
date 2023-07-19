@@ -11,7 +11,7 @@ class Agenda extends StatefulWidget {
 }
 
 class _Agenda extends State<Agenda> {
-  List recordatorios = [];
+  //List recordatorios = [];
 
   @override
   Widget build(BuildContext context) {
@@ -48,13 +48,15 @@ class _Agenda extends State<Agenda> {
                     ),
                     ElevatedButton(
                       onPressed: () => Get.toNamed(AppRoutes.nuevaTarea)!.then(
-                        (value) {                          
+                        (value) {setState(() {
+                          
+                        }); /*                        
                           if (Get.arguments != null) {
                             setState(() {
                               recordatorios.add(Get.arguments);
                             });
                           }
-                        },
+                        */},
                       ),
                       style: ButtonStyle(
                         padding:
@@ -109,7 +111,7 @@ class _Agenda extends State<Agenda> {
                               ),
                               onPressed: () {
                                 setState(() {
-                                  recordatorios.remove(recordatorio);
+                                  removeRecord(recordatorio);
                                 });
                               },
                               child: const Padding(

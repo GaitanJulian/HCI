@@ -17,6 +17,9 @@ class CdigoDeVerificacin extends StatelessWidget {
 
     return Material(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: MyColors.white,
+        ),
         body:  Container(
       width: double.infinity,
       child: Container(
@@ -33,29 +36,11 @@ class CdigoDeVerificacin extends StatelessWidget {
                 padding: EdgeInsets.fromLTRB(16*fem, 20*fem, 16*fem, 8*fem),
                 width: 412*fem,
                 height: 892*fem,
-                decoration: BoxDecoration (
-                  border: Border.all(color: Color(0x7f747775)),
-                  color: Color(0xffffffff),
-                  borderRadius: BorderRadius.circular(18*fem),
-                ),
+                
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        Get.toNamed(AppRoutes.registroCelular);
-                      },
-                      child: Container(
-                        margin: EdgeInsets.fromLTRB(0 * fem, 0 * fem, 360 * fem, 21 * fem),
-                        width: 24 * fem,
-                        height: 24 * fem,
-                        child: Image.asset(
-                          'assets/espacio-de-trabajo/images/atrs-Vhy.png',
-                          width: 24 * fem,
-                          height: 24 * fem,
-                        ),
-                      ),
-                    ),
+                    
                     Center(
                       // ingresaelcdigodeverificacinsvw (163:40961)
                       child: Container(
