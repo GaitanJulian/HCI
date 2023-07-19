@@ -38,7 +38,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     scrollIntoViewOfItems: ScrollIntoViewOfItems.fast,
                     header: const Text(
-                      'pregunta 1',
+                      '¿Como creo un perfil?',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
@@ -47,7 +47,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     content: const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text('Conenido'),
+                      child: Text('Para crear un nuevo perfil debes ir a la seccion de ajustes mediante la barra de navegacion, alli encontraras los perfiles existentes y podras añadir uno nuevo o eliminar uno existente.' , style: TextStyle(fontSize: 20),),
                     ),
                     headerBackgroundColor: MyColors.secondary,
                     contentBackgroundColor: MyColors.tertiary,
@@ -59,7 +59,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     scrollIntoViewOfItems: ScrollIntoViewOfItems.fast,
                     header: const Text(
-                      'pregunta 2',
+                      '¿Puedo crear nuevas categorias?',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
@@ -68,7 +68,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     content: const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text('Conenido'),
+                      child: Text('Si, en la seccion de ajustes encontraras las categorias existentes, alli podras crear una nueva categoria o eliminar una existente.', style: TextStyle(fontSize: 20),),
                     ),
                     headerBackgroundColor: MyColors.secondary,
                     contentBackgroundColor: MyColors.tertiary,
@@ -80,7 +80,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     scrollIntoViewOfItems: ScrollIntoViewOfItems.fast,
                     header: const Text(
-                      'pregunta 3',
+                      '¿Para que sirven las categorias y las prioridades?',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
@@ -89,7 +89,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     content: const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text('Conenido'),
+                      child: Text('las categorias se usaran en un futuro para agrupar los recordatorios en grupos y que asi sea puedan visualizar todos los recordatorios de una misma categoria', style: TextStyle(fontSize: 20),),
                     ),
                     headerBackgroundColor: MyColors.secondary,
                     contentBackgroundColor: MyColors.tertiary,
@@ -101,7 +101,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     scrollIntoViewOfItems: ScrollIntoViewOfItems.fast,
                     header: const Text(
-                      'pregunta 4',
+                      '¿Que significa el color que aparece al lado del recordatorio?',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,
@@ -110,7 +110,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     content: const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text('Conenido'),
+                      child: Text('El color representa la prioridad asignada a la tarea en el momento de creacion, verde significa una prioridad baja, amarillo significa una prioridad media, y rojo significa una prioridad alta.', style: TextStyle(fontSize: 20),),
                     ),
                     headerBackgroundColor: MyColors.secondary,
                     contentBackgroundColor: MyColors.tertiary,

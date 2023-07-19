@@ -122,7 +122,7 @@ class _Agenda extends State<Agenda> {
                             recordatorio[0],
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          subtitle: Text(timeFormatter(recordatorio[4])),
+                          subtitle: Text('${tipos[recordatorio[2]]} | ${timeFormatter(recordatorio[4])}'),
                           tileColor: MyColors.tertiary,
                         ),
                       );
