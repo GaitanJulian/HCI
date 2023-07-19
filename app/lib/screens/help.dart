@@ -110,7 +110,7 @@ class HelpScreen extends StatelessWidget {
                     ),
                     content: const Align(
                       alignment: Alignment.centerLeft,
-                      child: Text('El color representa la prioridad asignada a la tarea en el momento de creacion, verde significa una prioridad baja, amarillo significa una prioridad media, y rojo significa una prioridad alta.', style: TextStyle(fontSize: 20),),
+                      child: Text('El color representa la prioridad, verde significa una prioridad baja, amarillo es media, y rojo es alta.', style: TextStyle(fontSize: 20),),
                     ),
                     headerBackgroundColor: MyColors.secondary,
                     contentBackgroundColor: MyColors.tertiary,
